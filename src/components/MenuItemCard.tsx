@@ -116,7 +116,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-2">
             {item.isOnDiscount && item.discountPrice && (
-              <div className="bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-pulse">
+              <div className="bg-gradient-to-r from-filipino-red to-filipino-adobo text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-pulse">
                 SALE
               </div>
             )}
@@ -135,7 +135,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
           
           {/* Discount Percentage Badge */}
           {item.isOnDiscount && item.discountPrice && (
-            <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-red-600 text-xs font-bold px-2 py-1 rounded-full shadow-lg">
+            <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-filipino-red text-xs font-bold px-2 py-1 rounded-full shadow-lg">
               {Math.round(((item.basePrice - item.discountPrice) / item.basePrice) * 100)}% OFF
             </div>
           )}
@@ -162,7 +162,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
               {item.isOnDiscount && item.discountPrice ? (
                 <div className="space-y-1">
                   <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold text-red-600">
+                    <span className="text-2xl font-bold text-filipino-red">
                       ₱{item.discountPrice.toFixed(2)}
                     </span>
                     <span className="text-sm text-gray-500 line-through">
@@ -198,7 +198,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
               ) : quantity === 0 ? (
                 <button
                   onClick={handleAddToCart}
-                  className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2.5 rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-200 transform hover:scale-105 font-medium text-sm shadow-lg hover:shadow-xl"
+                  className="bg-gradient-to-r from-filipino-red to-filipino-adobo text-white px-6 py-2.5 rounded-xl hover:from-filipino-adobo hover:to-filipino-dark transition-all duration-200 transform hover:scale-105 font-medium text-sm shadow-lg hover:shadow-xl"
                 >
                   {item.variations?.length || item.addOns?.length ? 'Customize' : 'Add to Cart'}
                 </button>
@@ -260,7 +260,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
                         key={variation.id}
                         className={`flex items-center justify-between p-4 border-2 rounded-xl cursor-pointer transition-all duration-200 ${
                           selectedVariation?.id === variation.id
-                            ? 'border-red-500 bg-red-50'
+                            ? 'border-filipino-red bg-filipino-cream'
                             : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                         }`}
                       >
@@ -270,7 +270,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
                             name="variation"
                             checked={selectedVariation?.id === variation.id}
                             onChange={() => setSelectedVariation(variation)}
-                            className="text-red-600 focus:ring-red-500"
+                            className="text-filipino-red focus:ring-filipino-red"
                           />
                           <span className="font-medium text-gray-900">{variation.name}</span>
                         </div>
@@ -307,7 +307,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
                             
                             <div className="flex items-center space-x-2">
                               {selectedAddOns.find(a => a.id === addOn.id) ? (
-                                <div className="flex items-center space-x-2 bg-red-100 rounded-xl p-1 border border-red-200">
+                                <div className="flex items-center space-x-2 bg-filipino-cream rounded-xl p-1 border border-filipino-sesame">
                                   <button
                                     type="button"
                                     onClick={() => {
@@ -336,7 +336,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
                                 <button
                                   type="button"
                                   onClick={() => updateAddOnQuantity(addOn, 1)}
-                                  className="flex items-center space-x-1 px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-200 text-sm font-medium shadow-lg"
+                                  className="flex items-center space-x-1 px-4 py-2 bg-gradient-to-r from-filipino-red to-filipino-adobo text-white rounded-xl hover:from-filipino-adobo hover:to-filipino-dark transition-all duration-200 text-sm font-medium shadow-lg"
                                 >
                                   <Plus className="h-3 w-3" />
                                   <span>Add</span>
@@ -361,7 +361,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
 
               <button
                 onClick={handleCustomizedAddToCart}
-                className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-4 rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-200 font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-filipino-red to-filipino-adobo text-white py-4 rounded-xl hover:from-filipino-adobo hover:to-filipino-dark transition-all duration-200 font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <ShoppingCart className="h-5 w-5" />
                 <span>Add to Cart - ₱{calculatePrice().toFixed(2)}</span>

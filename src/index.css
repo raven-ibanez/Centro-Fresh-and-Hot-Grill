@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ramen Yard Custom Styles */
-/* Minimal helpers for ramen palette when needed outside tailwind tokens */
-.bg-ramen-cream { background-color: #FFF3E0; }
-.bg-ramen-beige { background-color: #F7E7CE; }
-.text-ramen-red { color: #D7263D; }
-.text-ramen-dark { color: #0B0A0A; }
-.border-ramen-sesame { border-color: #D1C7B7; }
-.ring-ramen-gold { --tw-ring-color: #E0A106; }
+/* Centro Fresh and Hot Grill Custom Styles */
+/* Minimal helpers for Filipino palette when needed outside tailwind tokens */
+.bg-filipino-cream { background-color: #FFF8DC; }
+.bg-filipino-beige { background-color: #F5E6D3; }
+.text-filipino-red { color: #CE1126; }
+.text-filipino-dark { color: #2D1810; }
+.border-filipino-sesame { border-color: #D2B48C; }
+.ring-filipino-gold { --tw-ring-color: #DAA520; }
 
 /* Hide scrollbar for mobile nav */
 .scrollbar-hide {

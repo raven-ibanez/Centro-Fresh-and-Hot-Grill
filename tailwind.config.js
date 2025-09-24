@@ -4,21 +4,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        ramen: {
-          red: '#D7263D',
-          dark: '#0B0A0A',
-          charcoal: '#111113',
-          cream: '#FFF3E0',
-          beige: '#F7E7CE',
-          gold: '#E0A106',
-          sesame: '#D1C7B7',
-          seaweed: '#1F2937',
-          kimchi: '#B81D24'
+        filipino: {
+          red: '#CE1126',      // Philippine flag red
+          blue: '#0038A8',     // Philippine flag blue
+          yellow: '#FCD116',   // Philippine flag yellow
+          dark: '#2D1810',     // Rich brown for Filipino warmth
+          charcoal: '#1A1A1A',
+          cream: '#FFF8DC',    // Warm cream
+          beige: '#F5E6D3',    // Golden beige
+          gold: '#DAA520',     // Golden yellow
+          sesame: '#D2B48C',   // Tan/sesame
+          seaweed: '#2F4F2F',  // Forest green
+          adobo: '#8B4513'     // Adobo brown
         }
       },
       fontFamily: {
-        'pretendard': ['Pretendard', 'system-ui', 'sans-serif'],
-        'noto-kr': ['Noto Serif KR', 'serif']
+        'inter': ['Inter', 'system-ui', 'sans-serif'],
+        'poppins': ['Poppins', 'system-ui', 'sans-serif']
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

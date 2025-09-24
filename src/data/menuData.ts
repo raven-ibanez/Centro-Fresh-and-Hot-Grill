@@ -1,213 +1,211 @@
 import { MenuItem } from '../types';
 
 export const menuData: MenuItem[] = [
-  // Dim Sum
+  // Grilled Specialties
   {
-    id: 'har-gow',
-    name: 'Har Gow (Shrimp Dumplings)',
-    description: 'Delicate translucent dumplings filled with fresh shrimp and bamboo shoots',
+    id: 'lechon-kawali',
+    name: 'Lechon Kawali',
+    description: 'Crispy deep-fried pork belly served with liver sauce and atchara',
+    basePrice: 320,
+    category: 'grilled',
+    popular: true,
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'inihaw-na-baboy',
+    name: 'Inihaw na Baboy',
+    description: 'Grilled pork marinated in soy sauce, calamansi, and garlic',
+    basePrice: 280,
+    category: 'grilled',
+    popular: true,
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'inihaw-na-manok',
+    name: 'Inihaw na Manok',
+    description: 'Grilled chicken marinated in soy sauce, calamansi, and spices',
+    basePrice: 250,
+    category: 'grilled',
+    popular: true,
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'bangus-grilled',
+    name: 'Inihaw na Bangus',
+    description: 'Grilled milkfish stuffed with tomatoes, onions, and ginger',
+    basePrice: 290,
+    category: 'grilled',
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'pork-bbq',
+    name: 'Pork BBQ',
+    description: 'Skewered pork marinated in sweet soy sauce and grilled to perfection',
     basePrice: 180,
-    category: 'dim-sum',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'siu-mai',
-    name: 'Siu Mai (Pork & Shrimp Dumplings)',
-    description: 'Traditional open-topped dumplings with pork, shrimp, and mushrooms',
-    basePrice: 160,
-    category: 'dim-sum',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'char-siu-bao',
-    name: 'Char Siu Bao (BBQ Pork Buns)',
-    description: 'Fluffy steamed buns filled with sweet and savory BBQ pork',
-    basePrice: 140,
-    category: 'dim-sum',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'xiao-long-bao',
-    name: 'Xiao Long Bao (Soup Dumplings)',
-    description: 'Delicate dumplings filled with pork and savory broth',
-    basePrice: 220,
-    category: 'dim-sum',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'cheung-fun',
-    name: 'Cheung Fun (Rice Noodle Rolls)',
-    description: 'Silky rice noodle rolls with choice of shrimp, beef, or char siu',
-    basePrice: 180,
-    category: 'dim-sum',
+    category: 'grilled',
     variations: [
-      { id: 'shrimp', name: 'Shrimp', price: 0 },
-      { id: 'beef', name: 'Beef', price: 20 },
-      { id: 'char-siu', name: 'Char Siu', price: 15 }
+      { id: 'regular', name: 'Regular (3 sticks)', price: 0 },
+      { id: 'large', name: 'Large (5 sticks)', price: 50 }
     ],
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'turnip-cake',
-    name: 'Lo Bak Go (Turnip Cake)',
-    description: 'Pan-fried radish cake with Chinese sausage and dried shrimp',
-    basePrice: 120,
-    category: 'dim-sum',
+    id: 'chicken-bbq',
+    name: 'Chicken BBQ',
+    description: 'Grilled chicken skewers with sweet and savory marinade',
+    basePrice: 160,
+    category: 'grilled',
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
 
-  // Noodles
+  // Rice Meals
   {
-    id: 'beef-chow-fun',
-    name: 'Beef Chow Fun',
-    description: 'Stir-fried wide rice noodles with tender beef and bean sprouts',
+    id: 'adobo-rice',
+    name: 'Adobo Rice',
+    description: 'Classic Filipino adobo with rice, choice of pork or chicken',
+    basePrice: 220,
+    category: 'rice-meals',
+    popular: true,
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'sinigang-rice',
+    name: 'Sinigang Rice',
+    description: 'Sour soup with rice, choice of pork, shrimp, or fish',
+    basePrice: 240,
+    category: 'rice-meals',
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'kare-kare-rice',
+    name: 'Kare-Kare Rice',
+    description: 'Oxtail and vegetables in peanut sauce served with rice',
     basePrice: 280,
+    category: 'rice-meals',
+    popular: true,
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'bistek-rice',
+    name: 'Bistek Rice',
+    description: 'Beef steak with onions in soy sauce and calamansi over rice',
+    basePrice: 260,
+    category: 'rice-meals',
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'tinola-rice',
+    name: 'Tinola Rice',
+    description: 'Chicken soup with ginger, papaya, and chili leaves over rice',
+    basePrice: 200,
+    category: 'rice-meals',
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'afritada-rice',
+    name: 'Afritada Rice',
+    description: 'Chicken or pork stewed with potatoes and bell peppers over rice',
+    basePrice: 230,
+    category: 'rice-meals',
+    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+
+  // Noodles & Pasta
+  {
+    id: 'pancit-canton',
+    name: 'Pancit Canton',
+    description: 'Stir-fried egg noodles with vegetables, meat, and shrimp',
+    basePrice: 200,
     category: 'noodles',
     popular: true,
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'dan-dan-noodles',
-    name: 'Dan Dan Noodles',
-    description: 'Sichuan noodles with spicy sesame sauce and minced pork',
-    basePrice: 250,
+    id: 'pancit-bihon',
+    name: 'Pancit Bihon',
+    description: 'Stir-fried rice noodles with vegetables and meat',
+    basePrice: 180,
     category: 'noodles',
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'wonton-noodle-soup',
-    name: 'Wonton Noodle Soup',
-    description: 'Fresh egg noodles in clear broth with pork and shrimp wontons',
+    id: 'lomi',
+    name: 'Lomi',
+    description: 'Thick egg noodles in rich soup with meat and vegetables',
     basePrice: 220,
     category: 'noodles',
-    popular: true,
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'pad-thai',
-    name: 'Pad Thai',
-    description: 'Thai stir-fried rice noodles with shrimp, tofu, and peanuts',
-    basePrice: 260,
+    id: 'batchoy',
+    name: 'Batchoy',
+    description: 'Noodle soup with pork organs, chicharon, and egg',
+    basePrice: 190,
     category: 'noodles',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'lo-mein',
-    name: 'Chicken Lo Mein',
-    description: 'Soft egg noodles tossed with chicken and vegetables',
-    basePrice: 240,
-    category: 'noodles',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-
-  // Rice Dishes
-  {
-    id: 'yang-chow-fried-rice',
-    name: 'Yang Chow Fried Rice',
-    description: 'Classic fried rice with shrimp, char siu, and eggs',
-    basePrice: 280,
-    category: 'rice-dishes',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'beef-broccoli-rice',
-    name: 'Beef and Broccoli Rice',
-    description: 'Tender beef with fresh broccoli in savory sauce over steamed rice',
-    basePrice: 320,
-    category: 'rice-dishes',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'sweet-sour-pork-rice',
-    name: 'Sweet and Sour Pork Rice',
-    description: 'Crispy pork with pineapple and bell peppers in tangy sauce',
-    basePrice: 300,
-    category: 'rice-dishes',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'mapo-tofu-rice',
-    name: 'Mapo Tofu Rice',
-    description: 'Silky tofu in spicy Sichuan sauce with ground pork over rice',
-    basePrice: 260,
-    category: 'rice-dishes',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'kung-pao-chicken-rice',
-    name: 'Kung Pao Chicken Rice',
-    description: 'Diced chicken with peanuts and chili peppers in savory sauce',
-    basePrice: 290,
-    category: 'rice-dishes',
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
 
   // Beverages
   {
-    id: 'jasmine-tea',
-    name: 'Jasmine Tea',
-    description: 'Fragrant jasmine tea served hot in traditional pot',
-    basePrice: 80,
+    id: 'calamansi-juice',
+    name: 'Calamansi Juice',
+    description: 'Fresh calamansi juice served chilled or with ice',
+    basePrice: 60,
     category: 'beverages',
     popular: true,
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'oolong-tea',
-    name: 'Oolong Tea',
-    description: 'Premium oolong tea with complex floral notes',
-    basePrice: 100,
+    id: 'buko-juice',
+    name: 'Buko Juice',
+    description: 'Fresh coconut water with coconut meat',
+    basePrice: 80,
     category: 'beverages',
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'chrysanthemum-tea',
-    name: 'Chrysanthemum Tea',
-    description: 'Cooling herbal tea with dried chrysanthemum flowers',
+    id: 'mango-juice',
+    name: 'Mango Juice',
+    description: 'Fresh mango juice made from ripe Philippine mangoes',
     basePrice: 90,
     category: 'beverages',
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'lychee-juice',
-    name: 'Fresh Lychee Juice',
-    description: 'Sweet and refreshing lychee juice served chilled',
-    basePrice: 120,
+    id: 'sago-gulaman',
+    name: 'Sago at Gulaman',
+    description: 'Traditional Filipino drink with tapioca pearls and jelly',
+    basePrice: 50,
     category: 'beverages',
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'winter-melon-tea',
-    name: 'Winter Melon Tea',
-    description: 'Traditional Chinese tea with subtle sweet flavor',
-    basePrice: 85,
+    id: 'iced-tea',
+    name: 'Iced Tea',
+    description: 'Refreshing iced tea perfect for any meal',
+    basePrice: 40,
     category: 'beverages',
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
-    id: 'hot-soy-milk',
-    name: 'Hot Soy Milk',
-    description: 'Fresh soy milk served hot with optional sugar',
+    id: 'coffee',
+    name: 'Kapeng Barako',
+    description: 'Strong Filipino coffee served hot or iced',
     basePrice: 70,
     category: 'beverages',
     variations: [
-      { id: 'plain', name: 'Plain', price: 0 },
-      { id: 'sweet', name: 'Sweetened', price: 10 }
+      { id: 'hot', name: 'Hot', price: 0 },
+      { id: 'iced', name: 'Iced', price: 10 }
     ],
     image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
 ];
 
 export const categories = [
-  { id: 'dim-sum', name: 'Dim Sum', icon: '🥟' },
-  { id: 'noodles', name: 'Noodles', icon: '🍜' },
-  { id: 'rice-dishes', name: 'Rice Dishes', icon: '🍚' },
-  { id: 'beverages', name: 'Beverages', icon: '🍵' }
+  { id: 'grilled', name: 'Grilled Specialties', icon: '🔥' },
+  { id: 'rice-meals', name: 'Rice Meals', icon: '🍚' },
+  { id: 'noodles', name: 'Noodles & Pasta', icon: '🍜' },
+  { id: 'beverages', name: 'Beverages', icon: '🥤' }
 ];
 
 export const addOnCategories = [
