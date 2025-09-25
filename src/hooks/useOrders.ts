@@ -213,6 +213,56 @@ export const useOrders = () => {
     }
   };
 
+  const deleteOrder = async (id: string) => {
+    try {
+      // First delete all order items associated with this order
+      const { error: itemsError } = await supabase
+        .from('order_items')
+        .delete()
+        .eq('order_id', id);
+
+      if (itemsError) throw itemsError;
+
+      // Then delete the order itself
+      const { error: orderError } = await supabase
+        .from('orders')
+        .delete()
+        .eq('id', id);
+
+      if (orderError) throw orderError;
+
+      await fetchOrders();
+    } catch (err) {
+      console.error('Error deleting order:', err);
+      throw err;
+    }
+  };
+
+  const clearAllData = async () => {
+    try {
+      // First delete all order items
+      const { error: itemsError } = await supabase
+        .from('order_items')
+        .delete()
+        .neq('id', '00000000-0000-0000-0000-000000000000'); // Delete all records
+
+      if (itemsError) throw itemsError;
+
+      // Then delete all orders
+      const { error: ordersError } = await supabase
+        .from('orders')
+        .delete()
+        .neq('id', '00000000-0000-0000-0000-000000000000'); // Delete all records
+
+      if (ordersError) throw ordersError;
+
+      await fetchOrders();
+    } catch (err) {
+      console.error('Error clearing all data:', err);
+      throw err;
+    }
+  };
+
   const getOrdersByStatus = (status: Order['status']) => {
     return orders.filter(order => order.status === status);
   };
@@ -246,6 +296,8 @@ export const useOrders = () => {
     addOrderItem,
     updateOrderItem,
     deleteOrderItem,
+    deleteOrder,
+    clearAllData,
     getOrdersByStatus,
     getTodaysOrders,
     getOrdersByDateRange,
